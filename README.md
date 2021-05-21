@@ -1,8 +1,8 @@
 ### Hi there, I’m Clément 👋
 
-- 💬 Blog: [cj.rs/blog](https://cj.rs/blog/)
-- 📃 Résumé: [cj.rs/cv](https://cj.rs/cv/)
-- 📫 How to reach me: [cj.rs/contact](https://cj.rs/contact/)
+- 💬 Blog: [cj.rs/blog](https://cj.rs/blog/?ref=gh-profile)
+- 📃 Résumé: [cj.rs/cv](https://cj.rs/cv/?ref=gh-profile)
+- 📫 How to reach me: [cj.rs/contact](https://cj.rs/contact/?ref=gh-profile)
 
 - 👯 Overview of my open-source work: [cj.rs/open-source](https://cj.rs/open-source/)
   - 👇 More details below
