@@ -1,4 +1,11 @@
-### Hi there 👋
+### Hi there, I’m Clément 👋
+
+- 💬 Blog: [cj.rs/blog](https://cj.rs/blog/)
+- 📃 Résumé: [cj.rs/cv](https://cj.rs/cv/)
+- 📫 How to reach me: [cj.rs/contact](https://cj.rs/contact/)
+
+- 👯 Overview of my open-source work: [cj.rs/open-source](https://cj.rs/open-source/)
+  - 👇 More details below
 
 <!--
 **cljoly/cljoly** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
