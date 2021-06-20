@@ -15,6 +15,12 @@ jobs:
           # Your GitHub token
           token: ${{ secrets.METRICS_TOKEN }}
 
+          # Rendered metrics output path, relative to repository's root
+          # When using "*", the correct extension will automatically on "config_output" value
+          filename:
+            description: Rendered metrics output path
+            default: github-metrics.*
+
           # Options
           user: cljoly
           template: classic
@@ -23,9 +29,31 @@ jobs:
           config_timezone: UTC
           plugin_isocalendar: yes
           plugin_isocalendar_duration: full-year
+
+  stackoverflow-metrics:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: lowlighter/metrics@latest
+        with:
+          # Your GitHub token
+          token: ${{ secrets.METRICS_TOKEN }}
+
+          # Rendered metrics output path, relative to repository's root
+          # When using "*", the correct extension will automatically on "config_output" value
+          filename:
+            description: Rendered metrics output path
+            default: stackoverflow-metrics.*
+
+          # Options
+          user: cljoly
+          template: classic
+          base: ""
+          config_display: large
+          config_timezone: UTC
+
           plugin_stackoverflow: yes
           plugin_stackoverflow_limit: 4
-          plugin_stackoverflow_lines.snippet: 4
+          plugin_stackoverflow_lines_snippet: 4
           plugin_stackoverflow_lines: 6
           plugin_stackoverflow_sections: answers-top, questions-recent
           plugin_stackoverflow_user: 4253785
