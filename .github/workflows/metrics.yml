@@ -23,7 +23,8 @@ jobs:
           config_display: large
           config_timezone: UTC
           plugin_isocalendar: yes
-          plugin_isocalendar_duration: full-year
+          # plugin_isocalendar_duration: full-year
+          plugin_isocalendar_duration: half-year
 
   stackoverflow-metrics:
     runs-on: ubuntu-latest
