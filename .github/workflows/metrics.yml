@@ -15,15 +15,10 @@ jobs:
           # Your GitHub token
           token: ${{ secrets.METRICS_TOKEN }}
 
-          # Rendered metrics output path, relative to repository's root
-          # When using "*", the correct extension will automatically on "config_output" value
-          filename:
-            description: Rendered metrics output path
-            default: github-metrics.*
-
           # Options
           user: cljoly
           template: classic
+          config_filename: github-metrics.*
           base: ""
           config_display: large
           config_timezone: UTC
@@ -38,15 +33,10 @@ jobs:
           # Your GitHub token
           token: ${{ secrets.METRICS_TOKEN }}
 
-          # Rendered metrics output path, relative to repository's root
-          # When using "*", the correct extension will automatically on "config_output" value
-          filename:
-            description: Rendered metrics output path
-            default: stackoverflow-metrics.*
-
           # Options
           user: cljoly
           template: classic
+          config_filename: stackoverflow-metrics.*
           base: ""
           config_display: large
           config_timezone: UTC
