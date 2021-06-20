@@ -18,7 +18,7 @@ jobs:
           # Options
           user: cljoly
           template: classic
-          config_filename: github-metrics.*
+          filename: github-metrics.*
           base: ""
           config_display: large
           config_timezone: UTC
@@ -36,7 +36,7 @@ jobs:
           # Options
           user: cljoly
           template: classic
-          config_filename: stackoverflow-metrics.*
+          filename: stackoverflow-metrics.*
           base: ""
           config_display: large
           config_timezone: UTC
