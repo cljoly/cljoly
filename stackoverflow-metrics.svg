@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="960" height="632" class="large">
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="981" class="large">
     <defs>
         <style/>
     </defs>
@@ -1395,8 +1395,18 @@
                           </div>
                                     </div>
                                     <div class="body markdown">
-                        An error occurred:code.replace is not a function
-Please report this to https://github.com/markedjs/marked.
+                        Run
+<code>git var GIT_EDITOR</code>
+to know which editor git is using. Once you know which editor you use, you’ll be able to look for specific help for this editor. You can set the editor used by git with <code>git config --global core.editor vim</code> (for instance).
+Git chooses the editor to use based on (in this order) and the previous command <code>git var GIT_EDITOR</code> goes through this:
+
+The environment variable <code>$GIT_EDITOR</code>
+Value of <code>core.editor</code> in the configuration file (check with <code>git config core.editor</code>)
+The environment variable <code>$VISUAL</code>
+The environment variable <code>$EDITOR</code>
+
+Note: In general, the value of an environment variable <code>$VAR</code> can be checked with <code>echo $VAR</code> in your shell.
+
                       </div>
                                     <div class="infos">
                                         <div>
@@ -1413,7 +1423,7 @@ Please report this to https://github.com/markedjs/marked.
                         </div>
                                         <div>
                           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16"><path fill-rule="evenodd" d="M4.75 0a.75.75 0 01.75.75V2h5V.75a.75.75 0 011.5 0V2h1.25c.966 0 1.75.784 1.75 1.75v10.5A1.75 1.75 0 0113.25 16H2.75A1.75 1.75 0 011 14.25V3.75C1 2.784 1.784 2 2.75 2H4V.75A.75.75 0 014.75 0zm0 3.5h8.5a.25.25 0 01.25.25V6h-11V3.75a.25.25 0 01.25-.25h2zm-2.25 4v6.75c0 .138.112.25.25.25h10.5a.25.25 0 00.25-.25V7.5h-11z"/></svg>
-                          24/09/2020
+                          24 Sept 2020
                         </div>
                                         <div>
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16"><path fill-rule="evenodd" d="M8 16A8 8 0 108 0a8 8 0 000 16zm3.78-9.72a.75.75 0 00-1.06-1.06L6.75 9.19 5.28 7.72a.75.75 0 00-1.06 1.06l2 2a.75.75 0 001.06 0l4.5-4.5z"/></svg>
@@ -1438,8 +1448,14 @@ Please report this to https://github.com/markedjs/marked.
                           </div>
                                     </div>
                                     <div class="body markdown">
-                        An error occurred:code.replace is not a function
-Please report this to https://github.com/markedjs/marked.
+                        As pointed out in the comments, the <code>lazy_static</code> crate works well.
+<code class="language-rust"><span class="token keyword">pub</span> <span class="token keyword">struct</span> <span class="token type-definition class-name">Currency</span> <span class="token punctuation">{</span>
+    name<span class="token punctuation">:</span> <span class="token operator">&amp;</span><span class="token lifetime-annotation symbol">'static</span> <span class="token keyword">str</span><span class="token punctuation">,</span>
+    iso_symbols<span class="token punctuation">:</span> <span class="token class-name">Vec</span><span class="token operator">&lt;</span><span class="token operator">&amp;</span><span class="token lifetime-annotation symbol">'static</span> <span class="token keyword">str</span><span class="token operator">&gt;</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span>
+<span class="token trimmed">(11 more lines were trimmed)</span></code>
+We have this global (with <code>pub</code>) variable BTC I was looking for.
+
                       </div>
                                     <div class="infos">
                                         <div>
@@ -1456,7 +1472,7 @@ Please report this to https://github.com/markedjs/marked.
                         </div>
                                         <div>
                           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16"><path fill-rule="evenodd" d="M4.75 0a.75.75 0 01.75.75V2h5V.75a.75.75 0 011.5 0V2h1.25c.966 0 1.75.784 1.75 1.75v10.5A1.75 1.75 0 0113.25 16H2.75A1.75 1.75 0 011 14.25V3.75C1 2.784 1.784 2 2.75 2H4V.75A.75.75 0 014.75 0zm0 3.5h8.5a.25.25 0 01.25.25V6h-11V3.75a.25.25 0 01.25-.25h2zm-2.25 4v6.75c0 .138.112.25.25.25h10.5a.25.25 0 00.25-.25V7.5h-11z"/></svg>
-                          12/01/2019
+                          12 Jan 2019
                         </div>
                                     </div>
                                 </div>
@@ -1477,8 +1493,15 @@ Please report this to https://github.com/markedjs/marked.
                           </div>
                                     </div>
                                     <div class="body markdown">
-                        An error occurred:code.replace is not a function
-Please report this to https://github.com/markedjs/marked.
+                        It works if you define a trait <code>Named</code> your <code>Cat</code> will implement. This trait contains the <code>name()</code> method, thus solving your problem.
+Here is the main changes to apply:
+<code class="language-rust"><span class="token comment">// …</span>
+<span class="token keyword">pub</span> <span class="token keyword">trait</span> <span class="token class-name">Named</span> <span class="token punctuation">{</span>
+    <span class="token keyword">fn</span> <span class="token function-definition function">name</span><span class="token punctuation">(</span><span class="token operator">&amp;</span><span class="token keyword">self</span><span class="token punctuation">)</span> <span class="token punctuation">-&gt;</span> <span class="token operator">&amp;</span><span class="token keyword">str</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token trimmed">(17 more lines were trimmed)</span></code>
+See the whole code on rust playground.
+
                       </div>
                                     <div class="infos">
                                         <div>
@@ -1495,7 +1518,7 @@ Please report this to https://github.com/markedjs/marked.
                         </div>
                                         <div>
                           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16"><path fill-rule="evenodd" d="M4.75 0a.75.75 0 01.75.75V2h5V.75a.75.75 0 011.5 0V2h1.25c.966 0 1.75.784 1.75 1.75v10.5A1.75 1.75 0 0113.25 16H2.75A1.75 1.75 0 011 14.25V3.75C1 2.784 1.784 2 2.75 2H4V.75A.75.75 0 014.75 0zm0 3.5h8.5a.25.25 0 01.25.25V6h-11V3.75a.25.25 0 01.25-.25h2zm-2.25 4v6.75c0 .138.112.25.25.25h10.5a.25.25 0 00.25-.25V7.5h-11z"/></svg>
-                          02/02/2019
+                          2 Feb 2019
                         </div>
                                         <div>
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16"><path fill-rule="evenodd" d="M8 16A8 8 0 108 0a8 8 0 000 16zm3.78-9.72a.75.75 0 00-1.06-1.06L6.75 9.19 5.28 7.72a.75.75 0 00-1.06 1.06l2 2a.75.75 0 001.06 0l4.5-4.5z"/></svg>
@@ -1541,7 +1564,7 @@ To go to and replace the next placeholder, just do <code>@a</code> (execute the 
                         </div>
                                         <div>
                           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16"><path fill-rule="evenodd" d="M4.75 0a.75.75 0 01.75.75V2h5V.75a.75.75 0 011.5 0V2h1.25c.966 0 1.75.784 1.75 1.75v10.5A1.75 1.75 0 0113.25 16H2.75A1.75 1.75 0 011 14.25V3.75C1 2.784 1.784 2 2.75 2H4V.75A.75.75 0 014.75 0zm0 3.5h8.5a.25.25 0 01.25.25V6h-11V3.75a.25.25 0 01.25-.25h2zm-2.25 4v6.75c0 .138.112.25.25.25h10.5a.25.25 0 00.25-.25V7.5h-11z"/></svg>
-                          08/06/2020
+                          8 Jun 2020
                         </div>
                                     </div>
                                 </div>
@@ -1570,8 +1593,11 @@ To go to and replace the next placeholder, just do <code>@a</code> (execute the 
                         </div>
                                     </div>
                                     <div class="body markdown">
-                        An error occurred:code.replace is not a function
-Please report this to https://github.com/markedjs/marked.
+                        Given a json array like:
+<code>["a","b","c"]</code>
+I want to get the index of <code>"b"</code> (here, this index is 1).
+How would I proceed using <code>jq</code>?
+
                       </div>
                                     <div class="infos">
                                         <div>
@@ -1596,7 +1622,7 @@ Please report this to https://github.com/markedjs/marked.
                         </div>
                                         <div>
                           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16"><path fill-rule="evenodd" d="M4.75 0a.75.75 0 01.75.75V2h5V.75a.75.75 0 011.5 0V2h1.25c.966 0 1.75.784 1.75 1.75v10.5A1.75 1.75 0 0113.25 16H2.75A1.75 1.75 0 011 14.25V3.75C1 2.784 1.784 2 2.75 2H4V.75A.75.75 0 014.75 0zm0 3.5h8.5a.25.25 0 01.25.25V6h-11V3.75a.25.25 0 01.25-.25h2zm-2.25 4v6.75c0 .138.112.25.25.25h10.5a.25.25 0 00.25-.25V7.5h-11z"/></svg>
-                          24/12/2020
+                          24 Dec 2020
                         </div>
                                     </div>
                                 </div>
@@ -1617,8 +1643,15 @@ Please report this to https://github.com/markedjs/marked.
                           </div>
                                     </div>
                                     <div class="body markdown">
-                        An error occurred:code.replace is not a function
-Please report this to https://github.com/markedjs/marked.
+                        Sometimes, for instance when reading some configuration file, you read a file path entered by the user without going through the shell (for instance, you get <code>~/test</code>).
+As <code>Option 2</code> below doesn’t write to test file in user home directory, I’m wondering if there is something more idiomatic than <code>Option 1</code>.
+<code class="language-rust"><span class="token keyword">use</span> <span class="token namespace">std<span class="token punctuation">::</span>env<span class="token punctuation">::</span></span>var<span class="token punctuation">;</span>
+<span class="token keyword">use</span> <span class="token namespace">std<span class="token punctuation">::</span>fs<span class="token punctuation">::</span></span><span class="token class-name">File</span><span class="token punctuation">;</span>
+<span class="token keyword">use</span> <span class="token namespace">std<span class="token punctuation">::</span>io<span class="token punctuation">::</span>prelude<span class="token punctuation">::</span></span><span class="token operator">*</span><span class="token punctuation">;</span>
+<span class="token keyword">use</span> <span class="token namespace">std<span class="token punctuation">::</span>path<span class="token punctuation">::</span></span><span class="token class-name">Path</span><span class="token punctuation">;</span>
+<span class="token trimmed">(18 more lines were trimmed)</span></code>
+Note: <code>unwrap()</code> is used here to keep the example short. There should be some error handling in production code.
+
                       </div>
                                     <div class="infos">
                                         <div>
@@ -1643,7 +1676,7 @@ Please report this to https://github.com/markedjs/marked.
                         </div>
                                         <div>
                           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16"><path fill-rule="evenodd" d="M4.75 0a.75.75 0 01.75.75V2h5V.75a.75.75 0 011.5 0V2h1.25c.966 0 1.75.784 1.75 1.75v10.5A1.75 1.75 0 0113.25 16H2.75A1.75 1.75 0 011 14.25V3.75C1 2.784 1.784 2 2.75 2H4V.75A.75.75 0 014.75 0zm0 3.5h8.5a.25.25 0 01.25.25V6h-11V3.75a.25.25 0 01.25-.25h2zm-2.25 4v6.75c0 .138.112.25.25.25h10.5a.25.25 0 00.25-.25V7.5h-11z"/></svg>
-                          19/01/2019
+                          19 Jan 2019
                         </div>
                                     </div>
                                 </div>
@@ -1664,8 +1697,53 @@ Please report this to https://github.com/markedjs/marked.
                           </div>
                                     </div>
                                     <div class="body markdown">
-                        An error occurred:code.replace is not a function
-Please report this to https://github.com/markedjs/marked.
+                        When you add a freshly created object in Room, with auto generation of the
+primary key, the newly created object keeps it’s undefined primary key. This
+proves inconvenient when you need to modify this object and persist the
+changes.
+Let’s take an example.
+<b>Entity Dao</b>
+So, let’s create a <code>User</code> whose <code>id</code> is auto-generated.
+<code class="language-java"><span class="token annotation punctuation">@Entity</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">User</span> <span class="token punctuation">{</span>
+    <span class="token annotation punctuation">@PrimaryKey</span><span class="token punctuation">(</span>autoGenerate <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">)</span>
+    <span class="token annotation punctuation">@ColumnInfo</span><span class="token punctuation">(</span>name <span class="token operator">=</span> <span class="token string">"id"</span><span class="token punctuation">)</span>
+<span class="token trimmed">(13 more lines were trimmed)</span></code>
+We have the following Dao:
+<code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">UserDao</span> <span class="token punctuation">{</span>
+    <span class="token annotation punctuation">@Insert</span>
+    <span class="token keyword">void</span> <span class="token function">insert</span><span class="token punctuation">(</span><span class="token class-name">User</span> user<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token trimmed">(5 more lines were trimmed)</span></code>
+We interract through the following Repository:
+<code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Repository</span> <span class="token punctuation">{</span>
+    <span class="token keyword">private</span> <span class="token class-name">UserDao</span> userDao<span class="token punctuation">;</span>
+
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">addUser</span><span class="token punctuation">(</span><span class="token class-name">User</span> user<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+<span class="token trimmed">(9 more lines were trimmed)</span></code>
+<b>Inserting and updating an Entity</b>
+So, now if we do this, <code>user</code> will not be updated, because <code>User.id</code> will stay at 0 and <code>Update</code> annotation updates the row only if the primary key already exists.
+<code class="language-java"><span class="token class-name">Repository</span> r <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Repository</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token class-name">User</span> user <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">User</span><span class="token punctuation">(</span><span class="token string">"me@my.email"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+r<span class="token punctuation">.</span><span class="token function">addUser</span><span class="token punctuation">(</span>user<span class="token punctuation">)</span><span class="token punctuation">;</span>
+user<span class="token punctuation">.</span><span class="token function">setEmail</span><span class="token punctuation">(</span><span class="token string">"new@user.email"</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code>
+<b>Proposed solution</b>
+To tackle this issue, we could change the <code>addUser</code> method of the <code>Repository</code> to update id after insertion.
+This question gave me the following idea:
+<code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Repository</span> <span class="token punctuation">{</span>
+    <span class="token keyword">private</span> <span class="token class-name">UserDao</span> userDao<span class="token punctuation">;</span>
+
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">addUser</span><span class="token punctuation">(</span><span class="token class-name">User</span> user<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+<span class="token trimmed">(6 more lines were trimmed)</span></code>
+With this Dao (note that <code>insert</code> returns a <code>long</code> instead of <code>void</code>):
+<code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">UserDao</span> <span class="token punctuation">{</span>
+    <span class="token annotation punctuation">@Insert</span>
+    <span class="token keyword">long</span> <span class="token function">insert</span><span class="token punctuation">(</span><span class="token class-name">User</span> user<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token trimmed">(8 more lines were trimmed)</span></code>
+Would this be an acceptable solution in the Android Jetpack paradigm? Do you
+see any pitfall?
+
                       </div>
                                     <div class="infos">
                                         <div>
@@ -1690,7 +1768,7 @@ Please report this to https://github.com/markedjs/marked.
                         </div>
                                         <div>
                           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16"><path fill-rule="evenodd" d="M4.75 0a.75.75 0 01.75.75V2h5V.75a.75.75 0 011.5 0V2h1.25c.966 0 1.75.784 1.75 1.75v10.5A1.75 1.75 0 0113.25 16H2.75A1.75 1.75 0 011 14.25V3.75C1 2.784 1.784 2 2.75 2H4V.75A.75.75 0 014.75 0zm0 3.5h8.5a.25.25 0 01.25.25V6h-11V3.75a.25.25 0 01.25-.25h2zm-2.25 4v6.75c0 .138.112.25.25.25h10.5a.25.25 0 00.25-.25V7.5h-11z"/></svg>
-                          06/07/2019
+                          6 Jul 2019
                         </div>
                                     </div>
                                 </div>
@@ -1711,8 +1789,24 @@ Please report this to https://github.com/markedjs/marked.
                           </div>
                                     </div>
                                     <div class="body markdown">
-                        An error occurred:code.replace is not a function
-Please report this to https://github.com/markedjs/marked.
+                        Sometimes, it’s handy to have a few instances of a <code>struct</code> stored and accessible everywhere.
+For instance, if I want to store some meta-data about a currency in a struct like this:
+<code class="language-rust"><span class="token keyword">struct</span> <span class="token type-definition class-name">Currency</span> <span class="token punctuation">{</span>
+    name<span class="token punctuation">:</span> <span class="token operator">&amp;</span><span class="token lifetime-annotation symbol">'static</span> <span class="token keyword">str</span><span class="token punctuation">,</span>
+    iso_symbols<span class="token punctuation">:</span> <span class="token class-name">Vec</span><span class="token operator">&lt;</span><span class="token operator">&amp;</span><span class="token lifetime-annotation symbol">'static</span> <span class="token keyword">str</span><span class="token operator">&gt;</span>
+<span class="token punctuation">}</span></code>
+I would then create an instance of <code>Currency</code> for every major currency. As these property don’t change, it could be hard-coded, at least for some currencies.
+I tried to use <code>const</code>, which would work without a Vec (the <code>vec!</code> macro does an allocation, which is not allowed in <code>const</code>).
+<code class="language-rust"><span class="token keyword">const</span> <span class="token constant">BTC</span><span class="token punctuation">:</span> <span class="token class-name">Currency</span> <span class="token operator">=</span> <span class="token class-name">Currency</span> <span class="token punctuation">{</span>
+    name<span class="token punctuation">:</span> <span class="token string">"Bitcoin"</span><span class="token punctuation">,</span>
+    iso_symbols<span class="token punctuation">:</span> <span class="token macro property">vec!</span><span class="token punctuation">[</span><span class="token string">"BTC"</span><span class="token punctuation">,</span> <span class="token string">"XBT"</span><span class="token punctuation">]</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span></code>
+So what workaround would you suggest to store a bunch of instance of <code>Currency</code> (for EUR, USD, BTC…)?
+Here, in the Rust Playground.
+
+EDIT: My question is quite similar to this one. The only difference is that I don’t need a mutable singleton, so the “Non-answer answer” doesn’t apply, right? The <code>lazy_static</code> idea is great though!
+It might be interesting to keep this question around since I didn’t searched with the keyword <code>singleton</code> and I may not be alone to miss this way to consider the problem.
+
                       </div>
                                     <div class="infos">
                                         <div>
@@ -1737,7 +1831,7 @@ Please report this to https://github.com/markedjs/marked.
                         </div>
                                         <div>
                           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16"><path fill-rule="evenodd" d="M4.75 0a.75.75 0 01.75.75V2h5V.75a.75.75 0 011.5 0V2h1.25c.966 0 1.75.784 1.75 1.75v10.5A1.75 1.75 0 0113.25 16H2.75A1.75 1.75 0 011 14.25V3.75C1 2.784 1.784 2 2.75 2H4V.75A.75.75 0 014.75 0zm0 3.5h8.5a.25.25 0 01.25.25V6h-11V3.75a.25.25 0 01.25-.25h2zm-2.25 4v6.75c0 .138.112.25.25.25h10.5a.25.25 0 00.25-.25V7.5h-11z"/></svg>
-                          12/01/2019
+                          12 Jan 2019
                         </div>
                                     </div>
                                 </div>
