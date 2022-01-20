@@ -1,8 +1,9 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="960" height="1928" class="large">
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="1022" class="large">
     <defs>
         <style/>
     </defs>
     <style>@keyframes animation-gauge{0%{stroke-dasharray:0 329}}@keyframes animation-fade{0%{opacity:0}to{opacity:1}}@keyframes animation-rainbow{0%,to{color:#7f00ff;fill:#7f00ff}14%{color:#a933ff;fill:#a933ff}29%{color:#007fff;fill:#007fff}43%{color:#00ff7f;fill:#00ff7f}57%{color:#ff0;fill:#ff0}71%{color:#ff7f00;fill:#ff7f00}86%{color:red;fill:red}}svg{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;font-size:14px;color:#777}svg.large .largeable-align-start{align-items:flex-start}svg.large .largeable-column-fields,svg.large .largeable-flex-wrap{display:flex;flex-wrap:wrap}svg.large .largeable-column-fields&gt;.field{width:230px}svg.large .largeable-width-half{width:50%}h2{margin:8px 0 2px;padding:0;color:#0366d6;font-weight:400;font-size:16px}h2 svg{fill:currentColor}section&gt;.field{margin-left:5px;margin-right:5px}.field{display:flex;align-items:center;margin-bottom:2px;white-space:nowrap}.field svg{margin:0 8px;fill:#959da5;flex-shrink:0}.field.error{color:#cb2431}.field.error svg{fill:#cb2431}.row{display:flex;flex-wrap:wrap}.row section{flex:1 1 0}#metrics-end,.fill-width{width:100%}.stackoverflow{margin-left:38px}.stackoverflow .entry{margin:4px 0 12px}.stackoverflow .title{color:#58a6ff;white-space:normal;align-items:flex-start}.stackoverflow .body,.stackoverflow .infos{color:#666;font-size:13px;margin-left:32px}.stackoverflow .infos{display:flex;align-items:center}.stackoverflow .infos&gt;div{display:inline-flex;align-items:center;margin-right:16px}.stackoverflow .infos svg{fill:currentColor;height:12px;width:12px;margin:0 4px 0 0;flex-shrink:0}.stackoverflow .body{overflow:hidden;text-overflow:ellipsis;border-left:3px solid#777777b2;padding-left:6px;width:400px}.markdown b{width:97%}.markdown a{color:#58a6ff;text-decoration:none}code,span.code{background-color:#7777771f;padding:1px 5px;font-size:80%;border-radius:6px;color:#777;font-family:SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace}.markdown b,code{display:inline-block}code[class^=language-]{white-space:pre-wrap;width:97%;margin-top:4px}span.code{margin:0 4px -3px}.token.comment{color:#690}.token.punctuation{color:#8a93a8}.token.constant,.token.keyword,.token.namespace,.token.symbol{color:#b44418}.token.boolean,.token.string{color:#2777aa}.token.property{color:#48428a}.token.operator{color:#106cbc}.token.trimmed{font-style:italic;color:#77777760}.token.inserted:not(.prefix){color:#aad0b4dc;background-color:#336543dc}.space{margin-left:7px}:root{--color-calendar-graph-day-bg:#ebedf0;--color-calendar-graph-day-border:rgba(27,31,35,0.06);--color-calendar-graph-day-L1-bg:#9be9a8;--color-calendar-graph-day-L2-bg:#40c463;--color-calendar-graph-day-L3-bg:#30a14e;--color-calendar-graph-day-L4-bg:#216e39;--color-calendar-halloween-graph-day-L1-bg:#ffee4a;--color-calendar-halloween-graph-day-L2-bg:#ffc501;--color-calendar-halloween-graph-day-L3-bg:#fe9600;--color-calendar-halloween-graph-day-L4-bg:#03001c;--color-calendar-graph-day-L4-border:rgba(27,31,35,0.06);--color-calendar-graph-day-L3-border:rgba(27,31,35,0.06);--color-calendar-graph-day-L2-border:rgba(27,31,35,0.06);--color-calendar-graph-day-L1-border:rgba(27,31,35,0.06)}.stackoverflow .body{display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:6}</style>
+    <style/>
     <foreignObject x="0" y="0" width="100%" height="100%">
         <div xmlns="http://www.w3.org/1999/xhtml" xmlns:xlink="http://www.w3.org/1999/xlink" class="items-wrapper">
             <section>
@@ -165,29 +166,11 @@ The environment variable
                                         As pointed out in the comments, the
                                         <code>lazy_static</code>
                                         crate works well.
-                                        <code class="language-rust">
-                                            <span class="token keyword">pub</span>
-                                            <span class="token keyword">struct</span>
-                                            <span class="token type-definition class-name">Currency</span>
-                                            <span class="token punctuation">{</span>
-                                            name
-                                            <span class="token punctuation">:</span>
-                                            <span class="token operator">&amp;</span>
-                                            <span class="token lifetime-annotation symbol">'static</span>
-                                            <span class="token keyword">str</span>
-                                            <span class="token punctuation">,</span>
-                                            iso_symbols
-                                            <span class="token punctuation">:</span>
-                                            <span class="token class-name">Vec</span>
-                                            <span class="token operator">&lt;</span>
-                                            <span class="token operator">&amp;</span>
-                                            <span class="token lifetime-annotation symbol">'static</span>
-                                            <span class="token keyword">str</span>
-                                            <span class="token operator">&gt;</span>
-                                            <span class="token punctuation">,</span>
-                                            <span class="token punctuation">}</span>
-                                            <span class="token trimmed">(11 more lines were trimmed)</span>
-                                        </code>
+                                        <code class="language-multiline language-rust" xml:space="preserve"><span class="token keyword">pub</span> <span class="token keyword">struct</span> <span class="token type-definition class-name">Currency</span> <span class="token punctuation">{</span>
+    name<span class="token punctuation">:</span> <span class="token operator">&amp;</span><span class="token lifetime-annotation symbol">'static</span> <span class="token keyword">str</span><span class="token punctuation">,</span>
+    iso_symbols<span class="token punctuation">:</span> <span class="token class-name">Vec</span><span class="token operator">&lt;</span><span class="token operator">&amp;</span><span class="token lifetime-annotation symbol">'static</span> <span class="token keyword">str</span><span class="token operator">&gt;</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span>
+<span class="token trimmed">(11 more lines were trimmed)</span></code>
                                         We have this global (with
                                         <code>pub</code>
                                         ) variable BTC I was looking for.
@@ -248,27 +231,10 @@ let mut resp = client.get(uri).await?;
 
 <span class="token trimmed">(3 more lines were trimmed)</span></code>
                                         while reqwest handle this for you (from docs.rs) :
-                                        <code class="language-rust">
-                                            <span class="token keyword">let</span>
-                                            body
-                                            <span class="token operator">=</span>
-                                            <span class="token namespace">reqwest<span class="token punctuation">::</span></span>
-                                            <span class="token function">get</span>
-                                            <span class="token punctuation">(</span>
-                                            <span class="token string">"https://www.rust-lang.org"</span>
-                                            <span class="token punctuation">)</span>
-                                            <span class="token punctuation">.</span>
-                                            <span class="token keyword">await</span>
-                                            <span class="token operator">?</span>
-                                            <span class="token punctuation">.</span>
-                                            <span class="token function">text</span>
-                                            <span class="token punctuation">(</span>
-                                            <span class="token punctuation">)</span>
-                                            <span class="token punctuation">.</span>
-                                            <span class="token keyword">await</span>
-                                            <span class="token operator">?</span>
-                                            <span class="token punctuation">;</span>
-                                        </code>
+                                        <code class="language-multiline language-rust" xml:space="preserve"><span class="token keyword">let</span> body <span class="token operator">=</span> <span class="token namespace">reqwest<span class="token punctuation">::</span></span><span class="token function">get</span><span class="token punctuation">(</span><span class="token string">"https://www.rust-lang.org"</span><span class="token punctuation">)</span>
+    <span class="token punctuation">.</span><span class="token keyword">await</span><span class="token operator">?</span>
+    <span class="token punctuation">.</span><span class="token function">text</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token punctuation">.</span><span class="token keyword">await</span><span class="token operator">?</span><span class="token punctuation">;</span></code>
                                     </div>
                                     <div class="infos">
                                         <div>
@@ -327,25 +293,11 @@ let mut resp = client.get(uri).await?;
                                         <code>name()</code>
                                         method, thus solving your problem.
 Here is the main changes to apply:
-                                        <code class="language-rust">
-                                            <span class="token comment">// …</span>
-                                            <span class="token keyword">pub</span>
-                                            <span class="token keyword">trait</span>
-                                            <span class="token class-name">Named</span>
-                                            <span class="token punctuation">{</span>
-                                            <span class="token keyword">fn</span>
-                                            <span class="token function-definition function">name</span>
-                                            <span class="token punctuation">(</span>
-                                            <span class="token operator">&amp;</span>
-                                            <span class="token keyword">self</span>
-                                            <span class="token punctuation">)</span>
-                                            <span class="token punctuation">-&gt;</span>
-                                            <span class="token operator">&amp;</span>
-                                            <span class="token keyword">str</span>
-                                            <span class="token punctuation">;</span>
-                                            <span class="token punctuation">}</span>
-                                            <span class="token trimmed">(17 more lines were trimmed)</span>
-                                        </code>
+                                        <code class="language-multiline language-rust" xml:space="preserve"><span class="token comment">// …</span>
+<span class="token keyword">pub</span> <span class="token keyword">trait</span> <span class="token type-definition class-name">Named</span> <span class="token punctuation">{</span>
+    <span class="token keyword">fn</span> <span class="token function-definition function">name</span><span class="token punctuation">(</span><span class="token operator">&amp;</span><span class="token keyword">self</span><span class="token punctuation">)</span> <span class="token punctuation">-&gt;</span> <span class="token operator">&amp;</span><span class="token keyword">str</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token trimmed">(17 more lines were trimmed)</span></code>
                                         See the whole code on rust playground.
                                     </div>
                                     <div class="infos">
@@ -489,25 +441,11 @@ As
                                         below doesn’t write to test file in user home directory, I’m wondering if there is something more idiomatic than
                                         <code>Option 1</code>
                                         .
-                                        <code class="language-rust">
-                                            <span class="token keyword">use</span>
-                                            <span class="token namespace">std<span class="token punctuation">::</span>env<span class="token punctuation">::</span></span>
-                                            var
-                                            <span class="token punctuation">;</span>
-                                            <span class="token keyword">use</span>
-                                            <span class="token namespace">std<span class="token punctuation">::</span>fs<span class="token punctuation">::</span></span>
-                                            <span class="token class-name">File</span>
-                                            <span class="token punctuation">;</span>
-                                            <span class="token keyword">use</span>
-                                            <span class="token namespace">std<span class="token punctuation">::</span>io<span class="token punctuation">::</span>prelude<span class="token punctuation">::</span></span>
-                                            <span class="token operator">*</span>
-                                            <span class="token punctuation">;</span>
-                                            <span class="token keyword">use</span>
-                                            <span class="token namespace">std<span class="token punctuation">::</span>path<span class="token punctuation">::</span></span>
-                                            <span class="token class-name">Path</span>
-                                            <span class="token punctuation">;</span>
-                                            <span class="token trimmed">(18 more lines were trimmed)</span>
-                                        </code>
+                                        <code class="language-multiline language-rust" xml:space="preserve"><span class="token keyword">use</span> <span class="token namespace">std<span class="token punctuation">::</span>env<span class="token punctuation">::</span></span>var<span class="token punctuation">;</span>
+<span class="token keyword">use</span> <span class="token namespace">std<span class="token punctuation">::</span>fs<span class="token punctuation">::</span></span><span class="token class-name">File</span><span class="token punctuation">;</span>
+<span class="token keyword">use</span> <span class="token namespace">std<span class="token punctuation">::</span>io<span class="token punctuation">::</span>prelude<span class="token punctuation">::</span></span><span class="token operator">*</span><span class="token punctuation">;</span>
+<span class="token keyword">use</span> <span class="token namespace">std<span class="token punctuation">::</span>path<span class="token punctuation">::</span></span><span class="token class-name">Path</span><span class="token punctuation">;</span>
+<span class="token trimmed">(18 more lines were trimmed)</span></code>
                                         Note:
                                         <code>unwrap()</code>
                                         is used here to keep the example short. There should be some error handling in production code.
@@ -584,64 +522,23 @@ Let’s take an example.
                                         whose
                                         <code>id</code>
                                         is auto-generated.
-                                        <code class="language-java">
-                                            <span class="token annotation punctuation">@Entity</span>
-                                            <span class="token punctuation">(</span>
-                                            <span class="token punctuation">)</span>
-                                            <span class="token keyword">public</span>
-                                            <span class="token keyword">class</span>
-                                            <span class="token class-name">User</span>
-                                            <span class="token punctuation">{</span>
-                                            <span class="token annotation punctuation">@PrimaryKey</span>
-                                            <span class="token punctuation">(</span>
-                                            autoGenerate
-                                            <span class="token operator">=</span>
-                                            <span class="token boolean">true</span>
-                                            <span class="token punctuation">)</span>
-                                            <span class="token annotation punctuation">@ColumnInfo</span>
-                                            <span class="token punctuation">(</span>
-                                            name
-                                            <span class="token operator">=</span>
-                                            <span class="token string">"id"</span>
-                                            <span class="token punctuation">)</span>
-                                            <span class="token trimmed">(13 more lines were trimmed)</span>
-                                        </code>
+                                        <code class="language-multiline language-java" xml:space="preserve"><span class="token annotation punctuation">@Entity</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">User</span> <span class="token punctuation">{</span>
+    <span class="token annotation punctuation">@PrimaryKey</span><span class="token punctuation">(</span>autoGenerate <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">)</span>
+    <span class="token annotation punctuation">@ColumnInfo</span><span class="token punctuation">(</span>name <span class="token operator">=</span> <span class="token string">"id"</span><span class="token punctuation">)</span>
+<span class="token trimmed">(13 more lines were trimmed)</span></code>
                                         We have the following Dao:
-                                        <code class="language-java">
-                                            <span class="token keyword">public</span>
-                                            <span class="token keyword">class</span>
-                                            <span class="token class-name">UserDao</span>
-                                            <span class="token punctuation">{</span>
-                                            <span class="token annotation punctuation">@Insert</span>
-                                            <span class="token keyword">void</span>
-                                            <span class="token function">insert</span>
-                                            <span class="token punctuation">(</span>
-                                            <span class="token class-name">User</span>
-                                            user
-                                            <span class="token punctuation">)</span>
-                                            <span class="token punctuation">;</span>
-                                            <span class="token trimmed">(5 more lines were trimmed)</span>
-                                        </code>
+                                        <code class="language-multiline language-java" xml:space="preserve"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">UserDao</span> <span class="token punctuation">{</span>
+    <span class="token annotation punctuation">@Insert</span>
+    <span class="token keyword">void</span> <span class="token function">insert</span><span class="token punctuation">(</span><span class="token class-name">User</span> user<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token trimmed">(5 more lines were trimmed)</span></code>
                                         We interract through the following Repository:
-                                        <code class="language-java">
-                                            <span class="token keyword">public</span>
-                                            <span class="token keyword">class</span>
-                                            <span class="token class-name">Repository</span>
-                                            <span class="token punctuation">{</span>
-                                            <span class="token keyword">private</span>
-                                            <span class="token class-name">UserDao</span>
-                                            userDao
-                                            <span class="token punctuation">;</span>
-                                            <span class="token keyword">public</span>
-                                            <span class="token keyword">void</span>
-                                            <span class="token function">addUser</span>
-                                            <span class="token punctuation">(</span>
-                                            <span class="token class-name">User</span>
-                                            user
-                                            <span class="token punctuation">)</span>
-                                            <span class="token punctuation">{</span>
-                                            <span class="token trimmed">(9 more lines were trimmed)</span>
-                                        </code>
+                                        <code class="language-multiline language-java" xml:space="preserve"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Repository</span> <span class="token punctuation">{</span>
+    <span class="token keyword">private</span> <span class="token class-name">UserDao</span> userDao<span class="token punctuation">;</span>
+
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">addUser</span><span class="token punctuation">(</span><span class="token class-name">User</span> user<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+<span class="token trimmed">(9 more lines were trimmed)</span></code>
                                         <b>Inserting and updating an Entity</b>
                                         So, now if we do this,
                                         <code>user</code>
@@ -650,39 +547,10 @@ Let’s take an example.
                                         will stay at 0 and
                                         <code>Update</code>
                                         annotation updates the row only if the primary key already exists.
-                                        <code class="language-java">
-                                            <span class="token class-name">Repository</span>
-                                            r
-                                            <span class="token operator">=</span>
-                                            <span class="token keyword">new</span>
-                                            <span class="token class-name">Repository</span>
-                                            <span class="token punctuation">(</span>
-                                            <span class="token punctuation">)</span>
-                                            <span class="token punctuation">;</span>
-                                            <span class="token class-name">User</span>
-                                            user
-                                            <span class="token operator">=</span>
-                                            <span class="token keyword">new</span>
-                                            <span class="token class-name">User</span>
-                                            <span class="token punctuation">(</span>
-                                            <span class="token string">"me@my.email"</span>
-                                            <span class="token punctuation">)</span>
-                                            <span class="token punctuation">;</span>
-                                            r
-                                            <span class="token punctuation">.</span>
-                                            <span class="token function">addUser</span>
-                                            <span class="token punctuation">(</span>
-                                            user
-                                            <span class="token punctuation">)</span>
-                                            <span class="token punctuation">;</span>
-                                            user
-                                            <span class="token punctuation">.</span>
-                                            <span class="token function">setEmail</span>
-                                            <span class="token punctuation">(</span>
-                                            <span class="token string">"new@user.email"</span>
-                                            <span class="token punctuation">)</span>
-                                            <span class="token punctuation">;</span>
-                                        </code>
+                                        <code class="language-multiline language-java" xml:space="preserve"><span class="token class-name">Repository</span> r <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Repository</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token class-name">User</span> user <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">User</span><span class="token punctuation">(</span><span class="token string">"me@my.email"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+r<span class="token punctuation">.</span><span class="token function">addUser</span><span class="token punctuation">(</span>user<span class="token punctuation">)</span><span class="token punctuation">;</span>
+user<span class="token punctuation">.</span><span class="token function">setEmail</span><span class="token punctuation">(</span><span class="token string">"new@user.email"</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code>
                                         <b>Proposed solution</b>
                                         To tackle this issue, we could change the
                                         <code>addUser</code>
@@ -690,25 +558,11 @@ Let’s take an example.
                                         <code>Repository</code>
                                         to update id after insertion.
 This question gave me the following idea:
-                                        <code class="language-java">
-                                            <span class="token keyword">public</span>
-                                            <span class="token keyword">class</span>
-                                            <span class="token class-name">Repository</span>
-                                            <span class="token punctuation">{</span>
-                                            <span class="token keyword">private</span>
-                                            <span class="token class-name">UserDao</span>
-                                            userDao
-                                            <span class="token punctuation">;</span>
-                                            <span class="token keyword">public</span>
-                                            <span class="token keyword">void</span>
-                                            <span class="token function">addUser</span>
-                                            <span class="token punctuation">(</span>
-                                            <span class="token class-name">User</span>
-                                            user
-                                            <span class="token punctuation">)</span>
-                                            <span class="token punctuation">{</span>
-                                            <span class="token trimmed">(6 more lines were trimmed)</span>
-                                        </code>
+                                        <code class="language-multiline language-java" xml:space="preserve"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Repository</span> <span class="token punctuation">{</span>
+    <span class="token keyword">private</span> <span class="token class-name">UserDao</span> userDao<span class="token punctuation">;</span>
+
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">addUser</span><span class="token punctuation">(</span><span class="token class-name">User</span> user<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+<span class="token trimmed">(6 more lines were trimmed)</span></code>
                                         With this Dao (note that
                                         <code>insert</code>
                                         returns a
@@ -716,21 +570,11 @@ This question gave me the following idea:
                                         instead of
                                         <code>void</code>
                                         ):
-                                        <code class="language-java">
-                                            <span class="token keyword">public</span>
-                                            <span class="token keyword">class</span>
-                                            <span class="token class-name">UserDao</span>
-                                            <span class="token punctuation">{</span>
-                                            <span class="token annotation punctuation">@Insert</span>
-                                            <span class="token keyword">long</span>
-                                            <span class="token function">insert</span>
-                                            <span class="token punctuation">(</span>
-                                            <span class="token class-name">User</span>
-                                            user
-                                            <span class="token punctuation">)</span>
-                                            <span class="token punctuation">;</span>
-                                            <span class="token trimmed">(8 more lines were trimmed)</span>
-                                        </code>
+                                        <code class="language-multiline language-java" xml:space="preserve"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">UserDao</span> <span class="token punctuation">{</span>
+    <span class="token annotation punctuation">@Insert</span>
+    <span class="token keyword">long</span> <span class="token function">insert</span><span class="token punctuation">(</span><span class="token class-name">User</span> user<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token trimmed">(8 more lines were trimmed)</span></code>
                                         Would this be an acceptable solution in the Android Jetpack paradigm? Do you
 see any pitfall?
                                     </div>
@@ -799,26 +643,10 @@ see any pitfall?
                                         <code>struct</code>
                                         stored and accessible everywhere.
 For instance, if I want to store some meta-data about a currency in a struct like this:
-                                        <code class="language-rust">
-                                            <span class="token keyword">struct</span>
-                                            <span class="token type-definition class-name">Currency</span>
-                                            <span class="token punctuation">{</span>
-                                            name
-                                            <span class="token punctuation">:</span>
-                                            <span class="token operator">&amp;</span>
-                                            <span class="token lifetime-annotation symbol">'static</span>
-                                            <span class="token keyword">str</span>
-                                            <span class="token punctuation">,</span>
-                                            iso_symbols
-                                            <span class="token punctuation">:</span>
-                                            <span class="token class-name">Vec</span>
-                                            <span class="token operator">&lt;</span>
-                                            <span class="token operator">&amp;</span>
-                                            <span class="token lifetime-annotation symbol">'static</span>
-                                            <span class="token keyword">str</span>
-                                            <span class="token operator">&gt;</span>
-                                            <span class="token punctuation">}</span>
-                                        </code>
+                                        <code class="language-multiline language-rust" xml:space="preserve"><span class="token keyword">struct</span> <span class="token type-definition class-name">Currency</span> <span class="token punctuation">{</span>
+    name<span class="token punctuation">:</span> <span class="token operator">&amp;</span><span class="token lifetime-annotation symbol">'static</span> <span class="token keyword">str</span><span class="token punctuation">,</span>
+    iso_symbols<span class="token punctuation">:</span> <span class="token class-name">Vec</span><span class="token operator">&lt;</span><span class="token operator">&amp;</span><span class="token lifetime-annotation symbol">'static</span> <span class="token keyword">str</span><span class="token operator">&gt;</span>
+<span class="token punctuation">}</span></code>
                                         I would then create an instance of
                                         <code>Currency</code>
                                         for every major currency. As these property don’t change, it could be hard-coded, at least for some currencies.
@@ -829,29 +657,10 @@ I tried to use
                                         macro does an allocation, which is not allowed in
                                         <code>const</code>
                                         ).
-                                        <code class="language-rust">
-                                            <span class="token keyword">const</span>
-                                            <span class="token constant">BTC</span>
-                                            <span class="token punctuation">:</span>
-                                            <span class="token class-name">Currency</span>
-                                            <span class="token operator">=</span>
-                                            <span class="token class-name">Currency</span>
-                                            <span class="token punctuation">{</span>
-                                            name
-                                            <span class="token punctuation">:</span>
-                                            <span class="token string">"Bitcoin"</span>
-                                            <span class="token punctuation">,</span>
-                                            iso_symbols
-                                            <span class="token punctuation">:</span>
-                                            <span class="token macro property">vec!</span>
-                                            <span class="token punctuation">[</span>
-                                            <span class="token string">"BTC"</span>
-                                            <span class="token punctuation">,</span>
-                                            <span class="token string">"XBT"</span>
-                                            <span class="token punctuation">]</span>
-                                            <span class="token punctuation">}</span>
-                                            <span class="token punctuation">;</span>
-                                        </code>
+                                        <code class="language-multiline language-rust" xml:space="preserve"><span class="token keyword">const</span> <span class="token constant">BTC</span><span class="token punctuation">:</span> <span class="token class-name">Currency</span> <span class="token operator">=</span> <span class="token class-name">Currency</span> <span class="token punctuation">{</span>
+    name<span class="token punctuation">:</span> <span class="token string">"Bitcoin"</span><span class="token punctuation">,</span>
+    iso_symbols<span class="token punctuation">:</span> <span class="token macro property">vec!</span><span class="token punctuation">[</span><span class="token string">"BTC"</span><span class="token punctuation">,</span> <span class="token string">"XBT"</span><span class="token punctuation">]</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span></code>
                                         So what workaround would you suggest to store a bunch of instance of
                                         <code>Currency</code>
                                         (for EUR, USD, BTC…)?
