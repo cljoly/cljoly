@@ -43,8 +43,8 @@ jobs:
 
           plugin_stackoverflow: yes
           plugin_stackoverflow_limit: 4
-          plugin_stackoverflow_lines_snippet: 4
-          plugin_stackoverflow_lines: 6
-          plugin_stackoverflow_sections: answers-top, questions-recent
+          plugin_stackoverflow_lines_snippet: 0
+          plugin_stackoverflow_lines: 0
+          plugin_stackoverflow_sections: answers-top, questions-top
           plugin_stackoverflow_user: 4253785
           repositories_forks: yes
