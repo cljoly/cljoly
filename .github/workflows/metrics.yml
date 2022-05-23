@@ -36,10 +36,11 @@ jobs:
           # Options
           user: cljoly
           template: classic
-          filename: stackoverflow-metrics.json
+          filename: stackoverflow-metrics.*
           base: ""
           config_display: large
           config_timezone: UTC
+          config_output: json
 
           plugin_stackoverflow: yes
           plugin_stackoverflow_limit: 4
