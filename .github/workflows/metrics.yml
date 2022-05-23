@@ -36,7 +36,7 @@ jobs:
           # Options
           user: cljoly
           template: classic
-          filename: stackoverflow-metrics.*
+          filename: stackoverflow-metrics.json
           base: ""
           config_display: large
           config_timezone: UTC
