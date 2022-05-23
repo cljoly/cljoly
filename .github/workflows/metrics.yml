@@ -64,3 +64,16 @@ jobs:
           plugin_stackoverflow_sections: answers-top, questions-top
           plugin_stackoverflow_user: 4253785
           repositories_forks: yes
+
+  misc-metrics:
+    runs-on: ubuntu-latest
+    steps:
+    - name: News from my blog
+      uses: lowlighter/metrics@latest
+      with:
+        filename: metrics-plugin-rss-myblog.svg
+        token: NOT_NEEDED
+        base: ""
+        plugin_rss: yes
+        plugin_rss_source: https://cj.rs/blog/index.xml
+        plugin_rss_limit: 4
