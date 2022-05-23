@@ -31,7 +31,7 @@ jobs:
           token: ${{ secrets.METRICS_TOKEN }}
           base: ""
           plugin_notable: yes
-          plugin_notable_indepth: yes
+          plugin_notable_indepth: no
           plugin_notable_repositories: yes
       - name: Repositories traffic
         uses: lowlighter/metrics@latest
