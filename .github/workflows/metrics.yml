@@ -24,6 +24,22 @@ jobs:
           config_timezone: UTC
           plugin_isocalendar: yes
           plugin_isocalendar_duration: full-year
+      - name: Indepth analysis
+        uses: lowlighter/metrics@latest
+        with:
+          filename: metrics-plugin-notable-indepth.svg
+          token: ${{ secrets.METRICS_TOKEN }}
+          base: ""
+          plugin_notable: yes
+          plugin_notable_indepth: yes
+          plugin_notable_repositories: yes
+      - name: Repositories traffic
+        uses: lowlighter/metrics@latest
+        with:
+          filename: metrics-plugin-traffic.svg
+          token: ${{ secrets.METRICS_TOKEN }}
+          base: repositories
+          plugin_traffic: yes
 
   stackoverflow-metrics:
     runs-on: ubuntu-latest
