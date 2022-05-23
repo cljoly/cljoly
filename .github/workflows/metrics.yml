@@ -23,7 +23,7 @@ jobs:
           config_display: large
           config_timezone: UTC
           plugin_isocalendar: yes
-          plugin_isocalendar_duration: full-year
+          #  plugin_isocalendar_duration: full-year
       - name: Indepth analysis
         uses: lowlighter/metrics@latest
         with:
