@@ -40,9 +40,6 @@ jobs:
           base: ""
           config_display: large
           config_timezone: UTC
-          config_output:
-            - json
-            - svg
 
           plugin_stackoverflow: yes
           plugin_stackoverflow_limit: 4
