@@ -6,7 +6,6 @@
 - 📮 How to reach me: [cj.rs/contact](https://cj.rs/contact/?ref=gh-profile)
 
 - 🚀 Quick presentation of my open-source work: [cj.rs/open-source](https://cj.rs/open-source/?ref=gh-profile)
-  - 👇 More details below
 
 <!--
 **cljoly/cljoly** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
