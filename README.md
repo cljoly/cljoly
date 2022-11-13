@@ -8,6 +8,7 @@
 
 - 🚀 Quick presentation of my open-source work: [cj.rs/open-source](https://cj.rs/open-source/?ref=gh-profile)
 
+<a rel="me" href="https://fosstodon.org/@cjoly"></a>
 <!--
 **cljoly/cljoly** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
