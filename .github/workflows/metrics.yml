@@ -84,6 +84,7 @@ jobs:
           user: cljoly
           template: classic
           filename: stackoverflow-metrics.json
+          format: "json"
 
           base: ""
           config_display: large
