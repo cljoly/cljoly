@@ -83,7 +83,8 @@ jobs:
           # Options
           user: cljoly
           template: classic
-          filename: stackoverflow-metrics.*
+          filename: stackoverflow-metrics.json
+
           base: ""
           config_display: large
           config_timezone: UTC
@@ -94,7 +95,6 @@ jobs:
           plugin_stackoverflow_lines: 0
           plugin_stackoverflow_sections: ""
           plugin_stackoverflow_user: 4253785
-          repositories_forks: yes
 
   misc-metrics:
     runs-on: ubuntu-latest
