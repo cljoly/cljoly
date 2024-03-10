@@ -57,7 +57,7 @@ jobs:
           filename: metrics-plugin-calendar-flat-full.*
           config_output: png
           token: ${{ secrets.METRICS_TOKEN }}
-          base: ""
+          base_skip: true
           plugin_calendar: yes
           plugin_calendar_limit: 2
 
