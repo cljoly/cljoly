@@ -41,8 +41,17 @@ jobs:
           plugin_languages_threshold: 2%
           plugin_languages_limit: 8
           filename: github-general-metrics.*
-          
-      - name: Full history calendar
+
+      - name: Full history calendar (SVG)
+        uses: lowlighter/metrics@latest
+        with:
+          filename: metrics-plugin-calendar-flat-full.*
+          config_output: svg
+          token: ${{ secrets.METRICS_TOKEN }}
+          base: ""
+          plugin_calendar: yes
+          plugin_calendar_limit: 4
+      - name: Full history calendar (PNG)
         uses: lowlighter/metrics@latest
         with:
           filename: metrics-plugin-calendar-flat-full.*
@@ -50,7 +59,7 @@ jobs:
           token: ${{ secrets.METRICS_TOKEN }}
           base: ""
           plugin_calendar: yes
-          plugin_calendar_limit: 4
+          plugin_calendar_limit: 3
 
   stackoverflow-metrics:
     runs-on: ubuntu-latest
