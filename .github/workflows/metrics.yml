@@ -45,7 +45,8 @@ jobs:
       - name: Full history calendar
         uses: lowlighter/metrics@latest
         with:
-          filename: metrics-plugin-calendar-flat-full.png
+          filename: metrics-plugin-calendar-flat-full.*
+          config_output: png
           token: ${{ secrets.METRICS_TOKEN }}
           base: ""
           plugin_calendar: yes
