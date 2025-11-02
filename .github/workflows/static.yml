@@ -2,9 +2,11 @@
 name: Deploy static content to Pages
 
 on:
-  # Runs on pushes targeting the default branch
+  # Pushes are not enough, because actions are not triggered when another action pushes the commit
   push:
     branches: ["main"]
+  schedule:
+    - cron: '15,35,55 * * * *'
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
