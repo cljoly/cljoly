@@ -50,7 +50,7 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
           base: ""
           plugin_calendar: yes
-          plugin_calendar_limit: 5
+          plugin_calendar_limit: 7
       - name: Full history calendar (PNG)
         uses: lowlighter/metrics@latest
         with:
@@ -59,4 +59,4 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
           base: ""
           plugin_calendar: yes
-          plugin_calendar_limit: 5
+          plugin_calendar_limit: 7
